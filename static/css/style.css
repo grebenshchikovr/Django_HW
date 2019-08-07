@@ -1,0 +1,229 @@
+body {
+		background-color: #f8f8f8;
+}
+
+h3 {
+	font-size: 18px;
+	color: #000000;
+	background-color: #eaeaea;
+	font-weight: 400;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.header {
+	height: 140px;
+	background-image: url('/static/img/pattern.jpg');
+}
+
+.footer {
+	height: 90px;
+	padding-top: 10px;
+	padding-right: 50px;
+	background-color: gray;
+	text-align: right;
+}
+
+.content{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.logo {
+	
+	float: left;
+	margin: 20px 20px;
+	display: inline-block;
+	
+}
+
+.menu {
+	float: right;
+	margin-top: 105px;
+	margin-right: 50px;
+}
+
+.menu li {
+	float: left;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+	list-style-type: none;
+	font-size: 20px;
+	font-style: italic;
+	
+}
+
+.menu a {
+	color: #8B00FF;
+	text-decoration: none;
+	
+}
+
+.menu a:hover {
+	color: red;
+
+}
+
+.gods {
+	display: inline-block;
+	outline: 2px solid lightgray;
+	height: 290px;
+	width: 200px;
+	margin-right: 5px;
+	margin-left: 5px; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+.gods:hover {
+	outline: 2px solid gray;
+}
+
+
+.detailed_description {
+						color: #484343;
+						font-size: 16px;
+						font-weight: 400;
+						line-height: 24px;
+						text-align: left;
+}
+
+.detailed_description p:first-letter {
+    font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта первой буквы */
+    font-size: 200%; /* Размер шрифта первого символа */
+    color: red; /* Красный цвет текста */
+   }
+
+
+.preview {
+	outline: 3px solid red;
+	height: 426px;
+	text-align: center;
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+
+}
+
+.preview:hover {
+	outline-width: 0px;
+	
+}
+
+.short_description {
+	
+	vertical-align: top;
+	display: inline-block;
+	margin-left: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+}
+
+.short_description p {
+					color: #707070;
+					font-size: 14px;
+					font-style: italic;
+					line-height: 16px;
+}
+
+
+
+input {
+  text-transform: capitalize;  
+}
+
+.e-mail_input:hover {
+	color: white;
+	background-color: black;
+}
+
+
+
+.contact_form ul {
+				 width: 750px;
+				 list-style-type: none;
+				 list-style-position: outside;
+				 margin: 0px;
+				 padding: 0px;
+}
+.contact_form li{
+				 padding: 12px;
+				 border-bottom:1px solid #eee;
+				 position:relative;
+}
+
+
+.contact_form li:first-child, .contact_form li:last-child {
+    border-bottom: 1px solid #777;
+}
+
+.contact_form label {
+				    width: 150px;
+				    margin-top: 3px;
+				    display: inline-block;
+				    float: left;
+				    padding: 3px;
+}
+.contact_form input {
+				    height: 20px;
+				    width: 220px;
+				    padding: 5px 8px;
+}
+.contact_form textarea {
+	padding: 8px; 
+	width: 426px;
+}
+
+.contact_form button {margin-left:156px;}
+
+button.submit {
+    background-color: #68b12f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+    background: -moz-linear-gradient(top, #68b12f, #50911e);
+    background: -ms-linear-gradient(top, #68b12f, #50911e);
+    background: -o-linear-gradient(top, #68b12f, #50911e);
+    background: linear-gradient(top, #68b12f, #50911e);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+    opacity:.85;
+    cursor: pointer;
+}
+button.submit:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
