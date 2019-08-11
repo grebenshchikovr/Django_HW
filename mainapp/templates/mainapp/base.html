@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="ru">
+<head>
+
+	{% block title %}
+    {% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% block css %}
+    {% endblock %}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	<div class="container">
+
+		{% include 'mainapp/includes/inc_menu.html' %}
+
+        <div class="content">
+		    {% block content %}
+            {% endblock %}
+        </div>
+
+        <div class="footer">
+            {% block footer  %}
+            {% endblock %}
+        </div>
+
+	</div>
+{% block js %}
+{% endblock %}
+</body>
+</html>

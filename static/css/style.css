@@ -16,7 +16,7 @@ h3 {
 
 .header {
 	height: 140px;
-	background-image: url('/static/img/pattern.jpg');
+	background-image: url('../img/pattern.jpg');
 }
 
 .footer {
