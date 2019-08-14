@@ -1,46 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
-	<title>Интернет-магазин аквариумов</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-			<div class="logo">
-				<img src="/static/img/aquarium-logo.png" height="100">
-			</div>
-			<ul class="menu">
-				<li>
-					<a href="#">Главная</a>
-				</li>
-				<li>				
-					<a href="/products/">Каталог</a>
-				</li>
-				<li>					
-					<a href="/contact/">Контакты</a>
-				</li>
+{% extends 'mainapp/base.html' %}
+
+	{% block title %}
+		<title>Главная</title>
+	{% endblock %}
+
+	{% block content %}
+		<hr>
+		<h1>Главная страница</h1>
+		<h2>Интернет-магазин "Аквариумист"</h2>
+		<h4>Добро пожаловать в наш магазин! У нас всегда
+			<ul>
+				<li>Тщательно отобранный ассортимент всегда в наличии</li>
+				<li>Качественный сервис и профессиональные консультации</li>
+				<li>Опытные аквариумисты к вашим услугам</li>
+				<li>Не экономим на декорациях и работаем на совесть</li>
 			</ul>
-		</div>
-	
-		<div class="content">
-			<hr>
-			<h1>Главная страница</h1>
-			<h2>Интернет-магазин "Аквариумист"</h2>
-			<h4>Добро пожаловать в наш магазин! У нас всегда
-				<ul>
-					<li>Тщательно отобранный ассортимент всегда в наличии</li>
-					<li>Качественный сервис и профессиональные консультации</li>
-					<li>Опытные аквариумисты к вашим услугам</li>
-					<li>Не экономим на декорациях и работаем на совесть</li>
-				</ul>
-			</h4>
-			<hr>
-		</div>
-		<div class="footer">
-			<p>Все права защищены &copy;</p>
-		</div>
-	</div>
-</body>
-</html>
+		</h4>
+		<hr>
+	{% endblock %}
+
+	{% block footer %}
+		<p>Все права защищены &copy;</p>
+	{% endblock %}
