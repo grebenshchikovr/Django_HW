@@ -1,24 +1,22 @@
 {% extends 'mainapp/base.html' %}
 
-	{% block title %}
-		<title>Каталог аквариумов</title>
-	{% endblock %}
-	
+		
 	{% block content %}
 		<hr>
-		<h1>Каталог</h1>
-		<div class="gods">
-			<img src="http://www.juwelshop.ru/_sh/00/43.jpg" height="250">
-			<a href="catalog/rio_125.html">Аквариум Рио 125</a>
-		</div>
-		<div class="gods">
-			<img src="http://www.juwelshop.ru/_sh/00/59.jpg" height="250">
-			<a href="catalog/rio_240.html">Аквариум Рио 240</a>
-		</div>
-		<div class="gods">
-			<img src="http://www.juwelshop.ru/_sh/00/67.jpg" height="250">
-			<a href="catalog/rio_350.html">Аквариум Рио 350</a>
-		</div>
+		<p>
+			{% for product in products %}
+  				<div class="block">
+					<a href="#">
+      					<img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+      					<div class="text">
+        					<h3>{{ product.category.name }}</h3>
+        					<h4>{{ product.name }}</h4>
+        					<p>{{ product.description }}</p>
+     				 </div>
+    				</a>
+  				</div>
+			{% endfor %}
+		</p>
 		<hr>
 	{% endblock %}
 
