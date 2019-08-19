@@ -1,0 +1,29 @@
+[
+  {
+    "category": "Тестовая категория 1",
+    "name": "Тестовый товар в категории 1",
+    "price": 2000,
+    "quantity": 10
+  },
+
+  {
+    "category": "Test category 2",
+    "name": "Test gods 2",
+    "price": 1000,
+    "quantity": 5
+  },
+
+  {
+    "category": "Test category 2",
+    "name": "Test gods 3",
+    "price": 5000,
+    "quantity": 50
+  },
+
+  {
+    "category": "Тестовая категория 1",
+    "name": "Тестовый товар 4",
+    "price": 100,
+    "quantity": 1
+  }
+]
