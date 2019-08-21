@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Тестовая категория 1",
+    "description": "описание тестовой категории 1"
+  },
+
+  {
+    "name": "Test category 2",
+    "description": "Description of the test category 2"
+  }
+]
