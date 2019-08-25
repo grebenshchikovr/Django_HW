@@ -7,3 +7,10 @@ class Basket(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(verbose_name='количество', default=1)
     add_datetime = models.DateTimeField(verbose_name='время', auto_now_add=True)
+
+    def __str__(self):
+        return '{} - {}'.format(self.user.username, self.product.name)
+
+    @property
+    def product_cost(self):
+        return self.quantity * self.product.price

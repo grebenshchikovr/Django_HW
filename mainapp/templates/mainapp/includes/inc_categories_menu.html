@@ -1,5 +1,6 @@
-<ul class="links-menu">
-  <li>
+<hr>
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
     <a href="{% url 'products:category' 0 %}"
        class="{% if request.resolver_match.kwargs.pk == '0' %}
                 active
@@ -8,7 +9,7 @@
     </a>
   </li>
   {% for category in categories %}
-    <li>
+    <li class="nav-item">
       <a href="{% url 'products:category' category.pk %}"
          class="{% if request.resolver_match.kwargs.pk|add:'0' == category.pk %}
                   active
@@ -18,3 +19,4 @@
     </li>
   {% endfor %}
 </ul>
+<hr>

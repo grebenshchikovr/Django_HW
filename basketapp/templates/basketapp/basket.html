@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class = 'basket_list'>
+        {% include 'basketapp/includes/inc_basket_list.html' %}
+    </div>
+    <form action="{% url 'main' %}">
+        <button class="btn btn-danger">на главную</button>
+    </form>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'js/basket_scripts.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+{% endblock %}

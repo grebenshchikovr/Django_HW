@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+
+
+{% block add_menu %}
+    {% include 'mainapp/includes/inc_categories_menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <img src="/media/{{ hot_product.image }}" class="card-img-top" alt="hot product">
+        <div class="card-body">
+            <h5 class="card-title">{{ hot_product.name }}</h5>
+            <p class="card-text">{{ hot_product.short_desc }}</p>
+            <a href="{% url 'products:product' hot_product.pk %}">
+                <h1 style="">Горячее предложение</h1>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+		<p>Все права защищены &copy;</p>
+{% endblock %}
