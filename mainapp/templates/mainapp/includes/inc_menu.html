@@ -1,50 +1,55 @@
-<div class="header">
-    <div class="logo">
-        <img src="/static/img/aquarium-logo.png" height="100">
-    </div>
+{% load custom_tags %}
 
-    <a href="{% url 'main' %}" class="logo"></a>
 
-    <ul class="menu">
+<div class="logo">
+    <img src="/static/img/aquarium-logo.png" height="100">
+</div>
+
+<ul class="menu">
+    <li>
+        <a href="{%url 'main' %}">Главная</a>
+    </li>
+
+    <li>
+        <a href="{%url 'contact' %}">Контакты</a>
+    </li>
+
+    <li>
+        <a href="{% url 'products:index' %}"
+           class="{% if request.resolver_match.namespace == 'products' %}
+               active
+               {% endif %}">
+            Продукты
+            </a>
+    </li>
+
+
+    {% if user.is_authenticated %}
         <li>
-            <a href="{%url 'main' %}">Главная</a>
-        </li>
-
-        <li>
-            <a href="{%url 'contact' %}">Контакты</a>
-        </li>
-
-        <li>
-            <a href="{% url 'products:index' %}"
-               class="{% if request.resolver_match.namespace == 'products' %}
-                active
-                {% endif %}">
-               Продукты
+            <a href="{% url 'auth:edit' %}">
+                {{ user.first_name|default:'Пользователь' }}
             </a>
         </li>
+    {% endif %}
 
 
+    <li>
         {% if user.is_authenticated %}
-            <li>
-                <a href="{% url 'auth:edit' %}">
-                    {{ user.first_name|default:'Пользователь' }}
-                </a>
-            </li>
+            <a href="{% url 'auth:logout' %}">выйти</a>
+        {% else %}
+            <a href="{% url 'auth:login' %}">войти</a>
         {% endif %}
+    </li>
 
+    <li>
+        <a href="{% url 'basket:view' %}" class="basket">
+            <span>
+                {% if basket %}
+                    {{ basket|basket_total_cost }} руб
+                    ({{ basket|basket_total_quantity }} шт)
+                {% endif %}
+            </span>
+        </a>
+    </li>
 
-        <li>
-            {% if user.is_authenticated %}
-              <a href="{% url 'auth:logout' %}">выйти</a>
-            {% else %}
-              <a href="{% url 'auth:login' %}">войти</a>
-            {% endif %}
-        </li>
-    </ul>
-    <a href="#" class="search"></a>
-    <a href="{% url 'basket:view' %}" class="basket">
-    <span>
-        {% if basket %} {{ basket|length }} {% endif %}
-    </span>
-    </a>
-</div>
+</ul>
