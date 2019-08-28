@@ -30,16 +30,15 @@
                 {{ user.first_name|default:'Пользователь' }}
             </a>
         </li>
-    {% endif %}
+        <li>
+             <a href="{% url 'auth:logout' %}">выйти</a>
+        </li>
 
-
-    <li>
-        {% if user.is_authenticated %}
-            <a href="{% url 'auth:logout' %}">выйти</a>
-        {% else %}
+    {% else %}
+        <li>
             <a href="{% url 'auth:login' %}">войти</a>
-        {% endif %}
-    </li>
+        </li>
+    {% endif %}
 
     <li>
         <a href="{% url 'basket:view' %}" class="basket">
