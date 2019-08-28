@@ -1,0 +1,9 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+    <form class="form-group" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary btn-lg btn-block" type="submit" value="Применить">
+    </form>
+{% endblock %}

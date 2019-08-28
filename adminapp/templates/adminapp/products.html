@@ -1,0 +1,31 @@
+{% extends 'adminapp/base.html' %}
+
+{% block header %}
+    <h2>Категории</h2>
+    {% include 'adminapp/includes/inc_category_menu.html' %}
+{% endblock %}
+
+{% block content %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Продукты</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row"></th>
+                <td><a href="{% url 'admin_custom:product_create' %}">Создать новый продукт</a></td>
+            </tr>
+
+            {% for object in object_list %}
+
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</a>
+                    <td><a href="{% url 'admin_custom:product_read' object.pk %}">{{ object.name }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

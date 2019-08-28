@@ -3,8 +3,6 @@ from .models import ProductCategory, Product
 from basketapp.models import Basket
 from django.shortcuts import get_object_or_404
 
-
-
 def main(request):
     title = 'главная'
 
@@ -68,8 +66,12 @@ def product(request, pk):
     return render(request, 'mainapp/product.html', content)
 
 def contact(request):
-    title = 'контакты'
 
-    content = {'title': title}
+    title = 'контакты'
+    basket = None
+    if request.user.is_authenticated:
+        basket = Basket.objects.filter(user=request.user)
+
+    content = {'title': title, 'basket': basket}
 
     return render(request, 'mainapp/contact.html', content)

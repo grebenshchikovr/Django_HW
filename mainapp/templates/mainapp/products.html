@@ -8,22 +8,20 @@
 
 {% block content %}
     <div class="products_list">
-      <div class="title clearfix">
+      <div class="title">
         <h2>
           Категория: "{{ category.name|title }}"
         </h2>
       </div>
 
-      <div class="category-products clearfix">
+      <div class="category-products">
           {% for product in products %}
-          <div class="block">
-              <a href="{% url 'products:product' product.pk %}">
-                <img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
-                <div class="text">
-                    <img src="{% static 'img/icon-hover.png' %}" alt="hover">
-                    <h4>{{ product.name }}</h4>
-                    <p>{{ product.description }}</p>
-              </a>
+          <div class="card">
+              <img class="card-img-top" src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+              <div class="card-body">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.short_desc }}</p>
+                  <a class="btn btn-primary" href="{% url 'products:product' product.pk %}">Карточка товара</a>
               </div>
           </div>
           {% endfor %}
@@ -36,3 +34,4 @@
 {% block footer %}
 		<p>Все права защищены &copy;</p>
 {% endblock %}
+

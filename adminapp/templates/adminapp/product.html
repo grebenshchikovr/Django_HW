@@ -1,0 +1,25 @@
+{% extends 'adminapp/base.html' %}
+
+{% block content %}
+    <div class="card" style="width: 100%">
+        <img src="/media/{{ object.image }}/" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ object.name }}</h5>
+            <p class="card-text">{{ object.short_desc }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Цена: {{ object.price }}</li>
+            <li class="list-group-item">На складе: {{ object.quantity }}</li>
+            <li class="list-group-item">{{ object.description }}</li>
+        </ul>
+    </div>
+    <p>
+        <a class="btn btn-primary btn-lg btn-block" href="{% url 'admin_custom:product_update' object.pk %}">Редактировать</a>
+    </p>
+    <p>
+        <a class="btn btn-danger btn-lg btn-block" href="{% url 'admin_custom:product_delete' object.pk %}">Удалить</a>
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg btn-block" href="{% url 'admin_custom:products' %}"> <-- Ко всем продуктам</a>
+    </p>
+{% endblock %}
